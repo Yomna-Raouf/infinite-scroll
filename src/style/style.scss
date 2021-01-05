@@ -12,11 +12,12 @@ nav {
     position: fixed;
     height: 70px;
     top: 0;
+    z-index: 1;
     width: 100%;
     background-color: rgb(253 253 253);
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(13px);
-    -webkit-backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(13px);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
     h1 {
         font-family: "Bebas Neue", cursive;
@@ -51,17 +52,62 @@ nav {
 
 .posts {
     margin-top: 6em;
-    .posts__images {
-        background: #bbcedd;
+    font-family: sans-serif;
+    .post {
+        background: rgb(220 228 235 / 60%);
+        backdrop-filter: blur(13px);
+        -webkit-backdrop-filter: blur(13px);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+        width: 40%;
+        margin: 15px 30%;
         padding: 10px;
         border-radius: 1em;
-        margin: 15px 30%;
-        img {
-            width: 100%;
-            border-radius: 1em;
+        .post__image {
+            border-bottom: #fdfdfd solid 1px;
+            .post__imageCreationDate {
+                color: #4c565d;
+                margin: 5px;
+                text-align: right;
+            }
+            .post__imageDownload {
+                text-align: center;
+                margin: 6px;
+                a {
+                    text-align: center;
+                    text-decoration: none;
+                    font-weight: 700;
+                    color: #205a80;
+                    cursor: pointer;
+                }
+            }
+            img {
+                width: 100%;
+                border-radius: 1em;
+                object-fit: contain;
+            }
+        }
+        .post__details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .post__likes {
+                color: #a00d1e;
+            }
+        }
+        .post__ownerName {
+            color: #205a80;
+            a {
+                text-decoration: none;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                color: #205a80;
+            }
         }
     }
 }
+
+
+/*** MEDIA QUERIES ***/
 
 @media screen and (max-width: 768px) {
     nav {
@@ -70,8 +116,10 @@ nav {
         }
     }
     .posts {
-        .posts__images {
-            margin: 15px 20%;
+        .post {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
@@ -83,8 +131,8 @@ nav {
         }
     }
     .posts {
-        .posts__images {
-            margin: 10px;
+        .post {
+            width: 90%;
         }
     }
 }
