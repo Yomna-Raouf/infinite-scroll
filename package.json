@@ -13,6 +13,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.1",
         "live-server": "^1.2.1",
+        "moment": "^2.29.1",
         "sass": "^1.32.0"
     },
     "devDependencies": {

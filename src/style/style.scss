@@ -62,28 +62,18 @@ nav {
         margin: 15px 30%;
         padding: 10px;
         border-radius: 1em;
-        .post__image {
-            border-bottom: #fdfdfd solid 1px;
+        .post__imageContainer {
             .post__imageCreationDate {
                 color: #4c565d;
                 margin: 5px;
                 text-align: right;
             }
-            .post__imageDownload {
-                text-align: center;
-                margin: 6px;
-                a {
-                    text-align: center;
-                    text-decoration: none;
-                    font-weight: 700;
-                    color: #205a80;
-                    cursor: pointer;
+            a {
+                img {
+                    width: 100%;
+                    border-radius: 1em;
+                    object-fit: contain;
                 }
-            }
-            img {
-                width: 100%;
-                border-radius: 1em;
-                object-fit: contain;
             }
         }
         .post__details {
@@ -112,7 +102,7 @@ nav {
 @media screen and (max-width: 768px) {
     nav {
         h1 {
-            font-size: 35px;
+            font-size: 30px;
         }
     }
     .posts {
